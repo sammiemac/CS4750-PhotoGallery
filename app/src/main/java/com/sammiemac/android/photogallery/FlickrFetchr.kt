@@ -54,15 +54,16 @@ class FlickrFetchr {
             }
         })
 
-        @WorkerThread
-        fun fetchPhoto(url: String): Bitmap? {
-            val response: Response<ResponseBody> = flickrApi.fetchUrlBytes(url).execute()
-            val bitmap = response.body()?.byteStream()?.use(BitmapFactory::decodeStream)
-            Log.i(TAG, "Decoded bitmap=$bitmap from Response=$response")
-            return bitmap
-        }
-
         return responseLiveData
 
     }
+
+    @WorkerThread
+    fun fetchPhoto(url: String): Bitmap? {
+        val response: Response<ResponseBody> = flickrApi.fetchUrlBytes(url).execute()
+        val bitmap = response.body()?.byteStream()?.use(BitmapFactory::decodeStream)
+        Log.i(TAG, "Decoded bitmap=$bitmap from Response=$response")
+        return bitmap
+    }
+
 }

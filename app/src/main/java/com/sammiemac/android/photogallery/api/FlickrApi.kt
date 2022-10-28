@@ -16,5 +16,4 @@ interface FlickrApi {
 
     @GET
     fun fetchUrlBytes(@Url url: String): Call<ResponseBody>
-
 }
