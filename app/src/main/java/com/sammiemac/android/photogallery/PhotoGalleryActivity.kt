@@ -1,7 +1,7 @@
 package com.sammiemac.android.photogallery
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
 class PhotoGalleryActivity : AppCompatActivity() {
 
@@ -18,5 +18,4 @@ class PhotoGalleryActivity : AppCompatActivity() {
         }
 
     }
-
 }

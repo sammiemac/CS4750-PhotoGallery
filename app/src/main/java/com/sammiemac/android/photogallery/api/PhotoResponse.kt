@@ -1,5 +1,6 @@
-package com.sammiemac.android.photogallery
+package com.sammiemac.android.photogallery.api
 
+import com.sammiemac.android.photogallery.GalleryItem
 import com.google.gson.annotations.SerializedName
 
 class PhotoResponse {
