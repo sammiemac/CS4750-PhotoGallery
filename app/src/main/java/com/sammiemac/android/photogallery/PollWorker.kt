@@ -2,9 +2,9 @@ package com.sammiemac.android.photogallery
 
 import android.app.PendingIntent
 import android.content.Context
-import android.support.v4.app.NotificationCompat
-import android.support.v4.app.NotificationManagerCompat
 import android.util.Log
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import androidx.work.Worker
 import androidx.work.WorkerParameters
 
@@ -43,6 +43,7 @@ class PollWorker(val context: Context, workerParams: WorkerParameters)
 
             val intent = PhotoGalleryActivity.newIntent(context)
             val pendingIntent = PendingIntent.getActivity(context, 0, intent, 0)
+
             val resources = context.resources
             val notification = NotificationCompat
                 .Builder(context, NOTIFICATION_CHANNEL_ID)
