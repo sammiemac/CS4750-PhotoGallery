@@ -77,6 +77,7 @@ class PhotoGalleryFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        thumbnailDownloader.clearQueue()
         viewLifecycleOwner.lifecycle.removeObserver(
             thumbnailDownloader.viewLifecycleObserver
         )
